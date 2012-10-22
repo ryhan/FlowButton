@@ -11,7 +11,13 @@ Flow unfortunately doesn't have a public API, as far as I am aware of.
 ## Usage
 
 The following code is used to generate a button.
-`<iframe flowTask="My Task Name" flowURL="www.relatedURL.com" flowDescription="My Task Description" seamless></iframe><script type="text/javascript" src="flow.js"></script>`
+```
+<iframe flowTask="My Task Name" 
+		flowURL="www.relatedURL.com" 
+		flowDescription="My Task Description" 
+		seamless></iframe>
+<script type="text/javascript" src="https://raw.github.com/ryhan/FlowButton/master/flow.js"></script>
+```
 
 Note the various attributes that are available.
 
