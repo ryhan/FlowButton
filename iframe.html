@@ -49,6 +49,7 @@
 			border-color: #020A12;
 			box-shadow: inset 0 3px 5px rgba(0,0,0,0.2);
 			color: #EEE;
+			cursor: progress;
 		}
 
 		.button[saved="true"]{
@@ -56,6 +57,7 @@
 			border: 1px solid rgba(0,0,0,0.5);
 			box-shadow: inset 0 1px 4px rgba(0,0,0,0.25);
 			color: rgba(0,0,0,0.6);
+			cursor: default;
 			text-shadow: none;
 		}
 		.button[login="true"]{
@@ -104,6 +106,7 @@ params = getParams();
 function add(){
 	flowButton.innerHTML = "Saving";
 	flowButton.setAttribute('loading', true);
+	flowButton.setAttribute('onclick', '');
 
 	var title = params.title || '';
 	var url = params.url || '';

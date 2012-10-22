@@ -4,13 +4,169 @@
 	<title>Flow Button Demo</title>
 </head>
 <body>
+<article>
+	<header>
+		<iframe flowTask="Check out Ryhan.org" flowURL="www.ryhan.org" flowDescription="A tumblr maintained by Ryhan Hassan" seamless style="float: right;"></iframe>
+		<script type="text/javascript" src="flow.js"></script>
 
-<iframe flowTask="Check out Ryhan.org" flowURL="www.ryhan.org" flowDescription="A tumblr maintained by Ryhan Hassan" seamless></iframe>
-<script type="text/javascript" src="flow.js"></script>
+		<h1>Build Applications with Flow</h1>
+	</header>
+
+	<section>
+		<h2>What's Flow?</h2>
+		<p> <a href='http://getflow.com/r/usSM'>Flow</a> is a cross platform task management application created by <a href='http://metalabdesign.com'>Metalab</a>. It's a simple way to make sure that everyone on your team knows what's going on, and what they need to do.
+		</p>
+		<h2>Frictionless Task Creation</h2>
+		<p> The process of adding tasks should be frictionless - otherwise, people will tend to keep tasks in their head, or worse, forget about something entirely.</p>
+		<p>Instead of requiring readers to open a separate application to add a task, you can relatively easily prompt readers to save a task for later using this simple Flow button generator. </p>
+		<p>It's easy to implement, and makes sure that readers remember to get things done.</p>
+
+	</section>
+	<section id="start">
+		<a class="button" onclick="showTasks()">Start Building Applications with Flow</a>
+	</section>
+	<div id="tasks">
+
+	<section class="task">
+		<iframe flowTask="Read the Flow Button Documentation" flowURL="https://github.com/ryhan/FlowButton/blob/master/README.md" seamless style="float: right;"></iframe>
+		<script type="text/javascript" src="flow.js"></script>	
+		<a href="https://github.com/ryhan/FlowButton/blob/master/README.md"><h2> Read the Documentation</h2></a>
+	</section>
+
+	<section class="task">
+		<iframe flowTask="Fork FlowButton on Github" flowURL="https://github.com/ryhan/FlowButton" flowDescription="Download the FlowButton source code and contribute changes." seamless style="float: right;"></iframe>
+		<script type="text/javascript" src="flow.js"></script>	
+		<a href="https://github.com/ryhan/FlowButton"><h2> Fork on Github</h2></a>
+	</section>
+
+	<section class="task">
+		<iframe flowTask="Email the FlowButton author (Ryhan Hassan, ryhanh@me.com)" flowURL="www.ryhan.me" flowDescription="Ryhan Hassan is a student developer/designer. Email him at ryhanh@me.com" seamless style="float: right;"></iframe>
+		<script type="text/javascript" src="flow.js"></script>	
+		<a href="mailto:ryhanh@me.com"><h2> Email the author</h2></a>
+	</section>
+
+
+	</div>
+
+</article>
+
+<script type="text/javascript">
+function showTasks(){
+	document.getElementById('tasks').setAttribute('class', 'visible');
+	document.getElementById('start').setAttribute('class', 'hidden');
+}
+
+</script>
+
 
 <style>
-body{ padding: 120px;}
-[flowTask]{	width: 120px; height: 50px;}
+[flowTask]{	width: 120px; height: 35px;}
+body{ 
+	background-color: #FAFAFA;
+	color: #555;
+	font-family: HelveticaNeue, 'Helvetica Neue', HelveticaNeueRoman, HelveticaNeue-Roman, 'Helvetica Neue Roman', Helvetica, Tahoma, Geneva, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 200;
+	font-weight: normal;
+	line-height: 26px;
+	margin: 100px auto;
+	width: 600px;
+
+}
+a{
+	color: #284FB2;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+a.button{
+	background: -webkit-linear-gradient(top, #FFF, #F0F0F0);
+	border: 1px solid #4D6DFF;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px #A7BAFF;
+	color: #4D6DFF;
+	cursor: pointer;
+	display: block;
+	font-size: 18px;
+	padding: 20px 30px;
+	text-align: center;
+
+}
+a.button:hover{
+	background: -webkit-linear-gradient(top, #FFF, #EEE);
+	border: 1px solid #556CD3;
+	box-shadow: 0 2px 5px #A7BAFF;
+	text-decoration: none;
+}
+a.button:active{
+	background: -webkit-linear-gradient(top, #EEE, #E0E0E0);
+	border: 1px solid #555;
+	box-shadow: inset 0 3px 3px rgba(0,0,0,0.2);
+	color: #555;
+}
+article{
+	background: -webkit-linear-gradient(top, #F5F5F5, white, white);
+	background-color: white;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	padding-bottom: 20px;
+}
+header{
+	border-bottom: 1px solid #E0E0E0;
+	margin-bottom: 0px;
+	padding: 30px;
+}
+section{
+	padding: 10px 30px;
+}
+
+section.task{
+	background: -webkit-linear-gradient(top, #FAFAFA, #FFF);
+	background-color: #FAFAFA;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+	margin: 10px 30px;
+	padding: 20px;
+}
+	section.task h2{
+		margin: 0;
+	}
+
+section.hidden{
+	display: none;
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+}
+h1{
+	color: #888;
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0;
+}
+h2{
+	color: #444;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+a h2{
+	color: inherit;
+}
+#tasks{
+	max-height: 0;
+	overflow:hidden;
+	position: relative;
+	top: 400px;
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+#tasks.visible{
+	top: 0;
+	max-height: none;
+	opacity: 1;
+}
+
 </style>
 
 </body>
