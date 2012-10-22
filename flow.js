@@ -15,7 +15,7 @@ var FlowApp = FlowApp || {
 			var taskName = tmp.getAttribute('flowTask');
 			if (notEmpty(taskName)){
 
-				var src = "iframe.html?";
+				var src = "http://ryhan.me/lab/FlowButton/iframe.html?";
 
 				var title = encodeURIComponent(taskName);
 				src += ("title="+title);
